@@ -8,16 +8,12 @@ thermogram = load('Patient 1.txt');
 figure(1); 
 imagesc(thermogram)
 
-[IDX,sep] = otsu(thermogram,3)
+[IDX,sep] = otsu(thermogram,3);
 maxOtsu = max(IDX(:));
 IDX(IDX<maxOtsu)=NaN;
 
 keyboard;
 
-% %In Integer-Bild umwandeln
-% thermo_i=im2uint8(thermogram);
-% figure(2)
-% %imshow(thermo_i)
 
 %3. Segmentierung
 
