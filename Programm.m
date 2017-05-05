@@ -8,6 +8,7 @@ thermogram = load('Patient 1.txt');
 figure(1); 
 imagesc(thermogram)
 
+% Otsu-Verfahren und Darstellung des Binärbildes
 [IDX,sep] = otsu(thermogram,3);
 maxOtsu = max(IDX(:));
 IDX(IDX<maxOtsu)=NaN;
